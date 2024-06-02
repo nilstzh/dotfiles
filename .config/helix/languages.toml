@@ -1,0 +1,9 @@
+# [language-server]
+# elixir-ls = { command = "elixir-ls" }
+# next-ls = { command = "nextls", args = ["--stdio=true"], config = { experimental = { completions = { enable = true } } }}
+
+[[language]]
+name = "elixir"
+auto-format = true
+# language-servers = ["next-ls"]
+# formatter = { command = "mix", args = ["format"] }
