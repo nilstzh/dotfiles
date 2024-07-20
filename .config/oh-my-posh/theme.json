@@ -1,0 +1,112 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "palette": {
+    "foreground": "#180034",
+    "background": "#3A2A4D",
+    "green": "#599d82",
+    "red": "#c93754",
+    "teal": "#047E84",
+    "plum": "#9A348E",
+    "blush": "#DA627D",
+    "salmon": "#FCA17D",
+    "sky": "#86BBD8",
+    "teal_blue": "#33658A"
+  },
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "background": "p:plum",
+          "foreground": "p:foreground",
+          "properties": {
+            "time_format": "15:04"
+          },
+          "style": "powerline",
+          "template": " {{ .CurrentDate | date .Format }} ",
+          "type": "time"
+        },
+        {
+          "background": "p:blush",
+          "foreground": "p:foreground",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "style": "full"
+          },
+          "style": "powerline",
+          "template": " {{ .Path }} ",
+          "type": "path"
+        },
+        {
+          "background": "p:salmon",
+          "foreground": "p:foreground",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "branch_icon": "",
+            "fetch_stash_count": true,
+            "fetch_status": false,
+            "fetch_upstream_icon": true
+          },
+          "style": "accordion",
+          "template": " \u279c ({{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }}) ",
+          "type": "git"
+        },
+        {
+          "type": "ruby",
+          "style": "powerline",
+          "powerline_symbol": "",
+          "foreground": "p:foreground",
+          "background": "p:red",
+          "template": "  {{ .Full }} "
+        },
+        {
+          "type": "rust",
+          "style": "powerline",
+          "powerline_symbol": "",
+          "foreground": "p:foreground",
+          "background": "p:red",
+          "template": "  {{ .Full }} "
+        },
+        {
+          "type": "elixir",
+          "style": "powerline",
+          "powerline_symbol": "",
+          "foreground": "p:foreground",
+          "background": "p:plum",
+          "template": "  {{ .Full }} "
+        },
+        {
+          "type": "node",
+          "style": "powerline",
+          "powerline_symbol": "",
+          "foreground": "p:foreground",
+          "background": "p:green",
+          "template": "  {{ .Full }} "
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "status",
+          "style": "plain",
+          "foreground": "p:green",
+          "background": "p:background",
+          "foreground_templates": [
+            "{{ if .Error }}p:blush{{ end }}"
+          ],
+          "template": "❯",
+          "properties": {
+            "always_enabled": true
+          }
+        }
+      ]
+    }
+  ],
+  "final_space": true,
+  "version": 2
+}
