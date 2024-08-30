@@ -13,12 +13,12 @@
   "buffer_line_height": "comfortable",
   "terminal": {
     "font_family": "CommitMono Nerd Font",
-    "font_size": 15,
+    "font_size": 14.5,
     "line_height": "standard"
   },
   "theme": {
     "mode": "system",
-    "light": "One Light",
+    "light": "BooBerry Helix Theme",
     "dark": "BooBerry Helix Theme"
   }
 }
